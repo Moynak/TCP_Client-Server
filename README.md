@@ -19,14 +19,24 @@ Here's an example of how to run on localhost.
 
 3. now run the clients; and enter information as prompted. 
 For instance ,
-./client localhost 6000
+./client 6000 127.0.0.1
 
 Example : 
-Username: moynak
-peer's username : dbag
-hi 
-		<< hello!
-LOGOUT
+When a client joins:
+```
+client socket created
+connected to server---
+:::Your No. 0
+```
+In Server it logs:
+```
+server: waiting for connections...
+server: got connection from 127.0.0.1
+Its CLIENT[0]
+```
+When Client[0] talks to Client[1], it starts its message starting with recipients index number.
+```
+1 Hello
+```
+When a client presses Ctrl+C it is disconnected.
 
-______
-Logged out.
